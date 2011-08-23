@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load markup %}
+
+{% block title %} Markdown render! {% endblock title %}
+{% block body %}
+    <h1>Original text: </h1>
+    <div class="well" style="height:400px; overflow:auto">
+            {{ mdBody|linebreaksbr }}
+    </div>
+    </br>
+    <h1>Markdown render: </h1>
+    <div class="well" style="height:400px; overflow:auto">
+        {{ mdBody|markdown:'safe,codehilite' }}
+    </div>
+
+    <a href="/" class="btn large primary">Back</a>
+
+{% endblock body %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <link href="{{ STATIC_URL }}css/pygments_default.css" rel="stylesheet" type="text/css" />
+        <link href="{{ STATIC_URL }}css/bootstrap-1.0.0.min.css" rel="stylesheet" type="text/css" />
+        <title>
+            {% block title %} No title :({% endblock title %}
+        </title> 
+        {% block head %}{% endblock head %}
+    </head>
+
+    <div class="container" >
+        <div class="well" style="background-color: rgba(0, 0, 0, 0.3);">
+        {% block body %}{% endblock body %}
+        <div>
+    <div>
+    </body>
+</html>

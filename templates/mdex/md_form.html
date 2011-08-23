@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %} Markdown form! {% endblock title %}
+{% block body %}
+    {% if form.errors %}
+        <div class="alert-message error">
+           <p><strong>Oh snap!</strong> Please correct the error{{ form.errors|pluralize }} below. </p>
+        </div>
+    {% endif %}
+
+    <h1>Markdown online!</h1>
+    <form action="" method="post">{% csrf_token %}
+        <table class="common-table">
+            {{ form.as_table }}
+        </table>
+        <button type="submit" class="btn large primary" value="Submit">Submit</button>
+    </form>
+{% endblock body %} 
